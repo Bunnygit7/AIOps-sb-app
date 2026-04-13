@@ -15,7 +15,9 @@ import java.util.List;
 public class Demo {
     private static final Logger logger=LoggerFactory.getLogger(Demo.class);
     @GetMapping
-    public String demo(){
+    public String demo() throws InterruptedException {
+        logger.info("demo");
+        Thread.sleep(100);
         return "hi";
     }
 
